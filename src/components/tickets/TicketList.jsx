@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getAllTickets } from "../../services/ticketService";
 import "./Tickets.css";
 import { Ticket } from "./Ticket.jsx";
-import { TicketFilterBar } from "./TicketFilterBar.js";
+import { TicketFilterBar } from "./TicketFilterBar.jsx";
 
 export const TicketList = () => {
   const [allTickets, setAllTickets] = useState([]);
@@ -38,7 +38,7 @@ export const TicketList = () => {
   return (
     <div className="tickets-container">
       <h2>Tickets</h2>
-      <TicketFilterBar
+      <TicketFilterBar 
         setShowEmergencyOnly={setShowEmergencyOnly}
         setSearchTerm={setSearchTerm}
       />

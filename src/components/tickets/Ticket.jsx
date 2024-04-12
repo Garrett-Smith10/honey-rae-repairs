@@ -3,7 +3,7 @@ import { getAllEmployees } from "../../services/employeeService.js"
 
 export const Ticket = ({ ticket }) => {
   const [employees, setEmployees] = useState([])
-  const [assignedEmployee, setAssignedEmlpoyee] = useState({})
+  const [assignedEmployee, setAssignedEmployee] = useState({})
 
   useEffect(() => {
     getAllEmployees().then((employeesArray) => {
@@ -14,7 +14,7 @@ export const Ticket = ({ ticket }) => {
   useEffect(() => {
 const foundEmployee = employees.find(
   (employee) => employee.id === ticket.employeeTickets[0]?.employeeId)
-  setAssignedEmlpoyee(foundEmployee)
+  setAssignedEmployee(foundEmployee)
   }, [employees, ticket])
 
 
